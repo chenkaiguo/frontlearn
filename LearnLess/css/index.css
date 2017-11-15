@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+div {
+  height: 100px;
+  width: 100px;
+  background: lightblue;
+  font-size: 20px;
+}
+.font20 {
+  font-size: 20px;
+}
+.border_02_test1 {
+  border: 5px solid red;
+}
+.border_02_test1 {
+  border: 10px solid red;
+}
+.triangle {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  border-width: 10px;
+  border-color: transparent transparent red transparent;
+  border-style: dashed dashed solid dashed;
+}
+.yunsuan_test {
+  width: 220px;
+}
+div a:hover {
+  color: blue;
+}
+.calc_text {
+  width: calc(200px+20px);
+}

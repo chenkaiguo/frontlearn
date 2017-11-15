@@ -1,0 +1,79 @@
+@charset 'UTF-8';
+
+//变量
+@blueColor:lightblue;
+
+
+div{
+  height:100px;
+  width:100px;
+  background:@blueColor;
+
+  .font20;
+}
+
+//混合
+.font20{
+  font-size: 20px;
+}
+
+
+//混合带参数
+.border_02(@border_width:1){
+  border:@border_width solid red;
+}
+
+.border_02_test1{
+    .border_02(5px);
+}
+
+.border_02_test1{
+  .border_02(10px);
+}
+
+//匹配模式
+.m_triangle(top,@w:5px,@c:#ccc) {
+  border-width: 10px;
+  border-color:red transparent transparent transparent;
+  border-style:solid dashed dashed dashed;
+
+}
+
+.m_triangle(bottom,@w:5px,@c:#ccc) {
+  border-width: 10px;
+  border-color: transparent transparent red transparent;
+  border-style: dashed dashed solid dashed;
+
+}
+
+.triangle{
+  width:0px;
+  height:0px;
+  overflow:hidden;
+
+  .m_triangle(bottom)
+}
+
+
+//运算
+
+@yunsuan:200px;
+
+.yunsuan_test{
+  width:@yunsuan+20;
+}
+
+//嵌套
+div{
+  a{
+    &:hover{
+      color:blue;
+    }
+  }
+}
+
+//避免便宜
+
+.calc_text{
+  width:~'calc(200px+20px)';
+}
